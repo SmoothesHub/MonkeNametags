@@ -1,0 +1,11 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)GamePath.props" Condition="Exists('$(MSBuildThisFileDirectory)GamePath.props')" />
+  <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <Deterministic>true</Deterministic>
+    <GamePath Condition="'$(GamePath)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Gorilla Tag</GamePath>
+    <GameManagedPath Condition="'$(GameManagedPath)' == ''">$(GamePath)\Gorilla Tag_Data\Managed</GameManagedPath>
+    <BepInExCorePath Condition="'$(BepInExCorePath)' == ''">$(GamePath)\BepInEx\core</BepInExCorePath>
+  </PropertyGroup>
+</Project>
